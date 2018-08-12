@@ -1,3 +1,5 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post.id)
+#rails is smart enough to know that that when i pass in the post argument i want to use the post's id. so i could simply write post_path(post) and it should still work.
+  %></div>
 <% end %>
